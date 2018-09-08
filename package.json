@@ -1,0 +1,36 @@
+{
+  "name": "template_engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run lint && npm run test && npm run docs",
+    "test": "mocha -r chai/register-should",
+    "docs": "jsdoc -d docs . lib",
+    "lint": "jshint ."
+  },
+  "author": "SILENT",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "peako": "github:silent-tempest/peako#dev"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jsdoc": "^3.5.5",
+    "jshint": "^2.9.6",
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silent-tempest/template_engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/silent-tempest/template_engine/issues"
+  },
+  "homepage": "https://github.com/silent-tempest/template_engine#readme"
+}
