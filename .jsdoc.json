@@ -1,0 +1,18 @@
+{
+  "source": {
+    "exclude": [
+      "node_modules",
+      "docs",
+      "test"
+    ],
+
+    "include": [
+      "lib/TemplateEngine.js",
+      "index.js"
+    ]
+  },
+
+  "opts": {
+    "destination": "docs"
+  }
+}

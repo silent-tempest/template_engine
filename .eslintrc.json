@@ -1,0 +1,11 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
+
+  "env": {
+    "commonjs": true
+  },
+
+  "extends": "v6.js"
+}

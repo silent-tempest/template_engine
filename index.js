@@ -16,7 +16,8 @@ module.exports = {
    * @return {string}
    * @note not works correctly now
    */
-  __express ( path, data ) {
+  __express ( path, data )
+  {
     if ( ! _engine ) {
       _engine = new TemplateEngine( '.' );
     }

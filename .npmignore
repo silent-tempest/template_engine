@@ -1,6 +1,6 @@
 docs
 test
 .gitignore
-.jshintrc
-.jshintignore
-.jsdoc.js
+.eslintrc
+.eslintignore
+.jsdoc.json
