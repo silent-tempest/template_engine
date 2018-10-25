@@ -1,29 +1,34 @@
 'use strict';
 
 /**
- * @module template_engine
+ * @namespace view_engine
  */
 
-let TemplateEngine = require( './lib/TemplateEngine' );
-let _engine;
+var deprecate  = require( './lib/internal/deprecate' );
 
-module.exports = {
+var ViewEngine = require( './lib/ViewEngine' );
+
+exports.__express = ( function ()
+{
+  var engine;
+
   /**
-   * @private
-   * @method module:template_engine.__express
-   * @param  {string} path
-   * @param  {object} [data]
-   * @return {string}
-   * @note not works correctly now
+   * Express-compatible view-engine interface.
+   * @method view_engine.__express
+   * @param  {string}   path
+   * @param  {object?}  data
+   * @return {string}        Rendered HTML.
    */
-  __express ( path, data )
+  return function __express ( path, data )
   {
-    if ( ! _engine ) {
-      _engine = new TemplateEngine( '.' );
+    if ( ! engine ) {
+      engine = new ViewEngine();
     }
 
-    return _engine.include( path, data );
-  },
+    return engine.include( path, data );
+  };
+} )();
 
-  TemplateEngine
-};
+deprecate( 'TemplateEngine is deprecated now. Use ViewEngine instead', exports, 'TemplateEngine', 'ViewEngine' );
+
+exports.ViewEngine = ViewEngine;
