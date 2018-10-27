@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @namespace ViewEngine
+ * @namespace T
  */
 
 var ViewEngine = require( './lib/ViewEngine' );
@@ -12,7 +12,7 @@ exports.__express = ( function ()
 
   /**
    * Express-compatible view-engine interface.
-   * @method ViewEngine.__express
+   * @method T.__express
    * @param  {string}   path
    * @param  {object?}  data
    * @return {string}        Rendered HTML.
