@@ -7,7 +7,7 @@
     ],
 
     "include": [
-      "lib/TemplateEngine.js",
+      "lib/ViewEngine.js",
       "index.js"
     ]
   },

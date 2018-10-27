@@ -1,5 +1,5 @@
 {
-  "name": "template_engine",
+  "name": "view_engine",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "eslint ."
   },
-  "author": "SILENT",
-  "license": "SEE LICENSE IN LICENSE",
+  "author": "Vladislav Tikhiy (SILENT)",
+  "license": "MIT",
   "dependencies": {
     "peako": "github:silent-tempest/peako#dev"
   },
