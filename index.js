@@ -11,7 +11,7 @@ exports.__express = ( function ()
   var engine;
 
   /**
-   * Express-compatible view-engine interface.
+   * Express-compatible "view engine" interface.
    * @private
    * @method T.__express
    * @param  {string}   path

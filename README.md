@@ -11,6 +11,15 @@ A Node.js (ES2015) View Engine with syntax close to EJS.
 * `npm install --save github:tikhiy/tmpl#next`
 * `npm install --save github:tikhiy/tmpl#v3.0.0`
 
+### Features
+
+| Syntax | Description                     | Example                       | Result              |
+| ------ | ------------------------------- | ----------------------------- | ------------------- |
+| `<%=`  | Inserts the HTML-escaped value. | `<%= '1st, & 2nd...' %>`      | `1st, &amp; 2nd...` |
+| `<%-`  | Inserts the value.              | `<%- Math.PI.toFixed( 2 ) %>` | `3.14`              |
+| `<%`   | A block of code.                | `<% print( 'A code...' ); %>` | `A code...`         |
+| `<%#`  | A comment.                      | `<%# A comment. %>`           | *No Output...*      |
+
 ### Example
 
 1. Import.

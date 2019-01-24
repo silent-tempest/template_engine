@@ -12,12 +12,12 @@
   "author": "Vladislav Tikhiy (SILENT)",
   "license": "MIT",
   "dependencies": {
-    "peako": "github:silent-tempest/peako#dev"
+    "peako": "github:tikhiy/peako#v2.0.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^5.7.0",
-    "eslint-config-v6.js": "github:tikhiy/eslint-config-v6.js#master",
+    "eslint-config-v6.js": "github:tikhiy/eslint-config-v6.js#v1.0.9",
     "jsdoc": "^3.5.5",
     "mocha": "^5.2.0"
   },

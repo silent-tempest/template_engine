@@ -10,8 +10,11 @@ describe( 'ViewEngine API', function ()
     {
       beforeEach( function ()
       {
-        this.engine = new ViewEngine();
-        this.engine.set( 'views', 'test/views' );
+        this.engine = new ViewEngine( {
+          settings: {
+            views: 'test/views'
+          }
+        } );
       } );
 
       describe( 'new ViewEngine.include', function ()
