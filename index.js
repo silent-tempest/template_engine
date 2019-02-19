@@ -14,9 +14,9 @@ exports.__express = ( function ()
    * Express-compatible "view engine" interface.
    * @private
    * @method T.__express
-   * @param  {string}   path
-   * @param  {object?}  data
-   * @return {string}        Rendered HTML.
+   * @param  {string}  path
+   * @param  {object?} data
+   * @return {string}       Rendered HTML.
    */
   return function __express ( path, data )
   {
@@ -24,7 +24,7 @@ exports.__express = ( function ()
       engine = new ViewEngine();
     }
 
-    return engine.include( path, data );
+    return engine.render( path, data );
   };
 } )();
 
