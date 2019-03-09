@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: TemplateEngine</title>
+    <title>JSDoc: Class: ViewEngine</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: TemplateEngine</h1>
+    <h1 class="page-title">Class: ViewEngine</h1>
 
     
 
@@ -29,7 +29,7 @@
 <header>
     
         <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="module-template_engine.html">template_engine</a>.</span>TemplateEngine<span class="signature">(folder<span class="signature-attributes">opt</span>, layout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+            <span class="ancestors"><a href="T.html">T</a>.</span>ViewEngine<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -42,7 +42,7 @@
     
 
     
-    <h4 class="name" id="TemplateEngine"><span class="type-signature"></span>new TemplateEngine<span class="signature">(folder<span class="signature-attributes">opt</span>, layout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ViewEngine"><span class="type-signature"></span>new ViewEngine<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -74,8 +74,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -86,13 +84,13 @@
 
         <tr>
             
-                <td class="name"><code>folder</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
@@ -111,16 +109,85 @@
             
 
             
-                <td class="default">
+
+            <td class="description last">
+                <h6>Properties</h6>
                 
-                    'views'
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>settings</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
                 
                 </td>
             
 
-            <td class="description last"></td>
-        </tr>
+            
 
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
@@ -150,11 +217,254 @@
             
 
             
-                <td class="default">
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>views</code></td>
+            
+
+            <td class="type">
+            
                 
-                    'layout'
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
                 
                 </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cache</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_ViewEngine.js.html">lib/ViewEngine.js</a>, <a href="lib_ViewEngine.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// Import.
+var T = require( 'tmpl' );
+// Create.
+var engine = new T.ViewEngine();
+// Create with initial settings.
+var engine = new T.ViewEngine( {
+  settings: {
+    cache: process.env.NODE_ENV === 'production'
+  }
+} );
+// Compatible with Express.
+app.set( 'view engine', 'tmpl' );
+// Exports "__express".
+app.engine( 'tmpl', T.__express );</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(setting)</span><span class="type-signature"> &rarr; {any}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>setting</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
             
 
             <td class="description last"></td>
@@ -198,7 +508,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line7">line 7</a>
+        <a href="lib_ViewEngine.js.html">lib/ViewEngine.js</a>, <a href="lib_ViewEngine.js.html#line128">line 128</a>
     </li></ul></dd>
     
 
@@ -221,36 +531,37 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A value of the setting.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">any</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>let TemplateEngine = require( 'template_engine/lib/TemplateEngine' );
-let engine = new TemplateEngine();</code></pre>
+    <pre class="prettyprint"><code>var views = engine.get( 'views' );</code></pre>
 
 
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
 
         
             
@@ -398,7 +709,7 @@ let engine = new TemplateEngine();</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line27">line 27</a>
+        <a href="lib_ViewEngine.js.html">lib/ViewEngine.js</a>, <a href="lib_ViewEngine.js.html#line54">line 54</a>
     </li></ul></dd>
     
 
@@ -446,223 +757,8 @@ let engine = new TemplateEngine();</code></pre>
     <h5>Example</h5>
     
     <pre class="prettyprint"><code>&lt;% data.posts.forEach( function ( post ) { %>
-  &lt;%= this.include( 'partials/post', { post: post } ) %>
+  &lt;%- this.include( 'partials/post', { post: post } ) %>
 &lt;% }, this ); %></code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="link"><span class="type-signature"></span>link<span class="signature">(href, rel<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    builds &lt;link&gt; string with `href` and `rel`.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>href</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>rel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'stylesheet'
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line95">line 95</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>let head = [
-  engine.link( './styles/index.css' ) // &lt;link rel="stylesheet" href="./styles/index.css" />
-];</code></pre>
 
 
 
@@ -812,7 +908,7 @@ let engine = new TemplateEngine();</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line60">line 60</a>
+        <a href="lib_ViewEngine.js.html">lib/ViewEngine.js</a>, <a href="lib_ViewEngine.js.html#line89">line 89</a>
     </li></ul></dd>
     
 
@@ -869,167 +965,7 @@ let engine = new TemplateEngine();</code></pre>
     
 
     
-    <h4 class="name" id="script"><span class="type-signature"></span>script<span class="signature">(src)</span><span class="type-signature"> &rarr; {string}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    builds &lt;script&gt; string with `src`.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>src</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line80">line 80</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>let body = [
-  engine.script( './scripts/index.js' ) // &lt;script src="./scripts/index.js">&lt;/script>
-];</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(setting, value)</span><span class="type-signature"> &rarr; {void}</span></h4>
     
 
     
@@ -1069,7 +1005,7 @@ let engine = new TemplateEngine();</code></pre>
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>setting</code></td>
             
 
             <td class="type">
@@ -1149,7 +1085,7 @@ let engine = new TemplateEngine();</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_TemplateEngine.js.html">lib/TemplateEngine.js</a>, <a href="lib_TemplateEngine.js.html#line111">line 111</a>
+        <a href="lib_ViewEngine.js.html">lib/ViewEngine.js</a>, <a href="lib_ViewEngine.js.html#line109">line 109</a>
     </li></ul></dd>
     
 
@@ -1172,13 +1108,35 @@ let engine = new TemplateEngine();</code></pre>
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Returns nothing.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>if ( process.env.env === 'prod' ) {
+    <pre class="prettyprint"><code>if ( process.env.NODE_ENV === 'production' ) {
   engine.set( 'cache', true );
 }</code></pre>
 
@@ -1200,13 +1158,13 @@ let engine = new TemplateEngine();</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-template_engine.html">template_engine</a></li></ul><h3>Classes</h3><ul><li><a href="module-template_engine.TemplateEngine.html">TemplateEngine</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="T.ViewEngine.html">ViewEngine</a></li></ul><h3>Namespaces</h3><ul><li><a href="T.html">T</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Sep 21 2018 20:48:33 GMT+0700 (+07)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Jan 25 2019 05:08:39 GMT+0700 (+07)
 </footer>
 
 <script> prettyPrint(); </script>

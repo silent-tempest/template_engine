@@ -1,6 +1,6 @@
 {
-  "name": "template_engine",
-  "version": "1.1.0",
+  "name": "tmpl",
+  "version": "3.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "eslint ."
   },
-  "author": "SILENT",
-  "license": "SEE LICENSE IN LICENSE",
+  "author": "Vladislav Tikhiy (SILENT)",
+  "license": "MIT",
   "dependencies": {
-    "peako": "github:silent-tempest/peako#dev"
+    "peako": "github:tikhiy/peako#v2.0.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^5.7.0",
-    "eslint-config-v6.js": "github:tikhiy/eslint-config-v6.js#master",
+    "eslint-config-v6.js": "github:tikhiy/eslint-config-v6.js#v1.0.9",
     "jsdoc": "^3.5.5",
     "mocha": "^5.2.0"
   },
